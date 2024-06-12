@@ -8,21 +8,10 @@ const fileUpload = require('express-fileupload')
 const app = express();
 app.use(cookieParser())
 
-const allowedOrigins = [
-    'http://localhost:3000',
-    'https://fantastic-speculoos-ca9f69.netlify.app'
-  ];
-  
-  app.use(cors({
-    origin: function (origin, callback) {
-      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-        callback(null, true);
-      } else {
-        callback(new Error('Not allowed by CORS'));
-      }
-    },
-    credentials: true // if you need to send cookies or HTTP authentication
-  }));
+app.use(cors({
+    origin: 'https://fantastic-speculoos-ca9f69.netlify.app', // Adjust this to match your frontend origin
+    credentials: true // Allow cookies to be sent
+}));
 
 app.use(express.json())             
 
