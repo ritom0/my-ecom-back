@@ -9,7 +9,7 @@ const app = express();
 app.use(cookieParser())
 
 app.use(cors({
-    origin: 'https://fantastic-speculoos-ca9f69.netlify.app', // Adjust this to match your frontend origin
+    origin: 'http://localhost:3000', // Adjust this to match your frontend origin
     credentials: true // Allow cookies to be sent
 }));
 
