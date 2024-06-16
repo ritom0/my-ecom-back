@@ -9,7 +9,7 @@ const app = express();
 app.use(cookieParser())
 
 app.use(cors({
-    origin: 'https://my-ecom-back-13.onrender.com', // Adjust this to match your frontend origin
+    origin: 'https://tourmaline-dusk-64604f.netlify.app', // Adjust this to match your frontend origin
     credentials: true // Allow cookies to be sent
 }));
 
