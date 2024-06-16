@@ -80,7 +80,7 @@ const userCtrl = {
        
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: '/user/refresh_token',
+                path: 'https://my-ecom-back-13.onrender.com/user/refresh_token',
             })
             
             res.json({ accesstoken })
