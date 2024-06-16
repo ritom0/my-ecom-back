@@ -8,10 +8,23 @@ const fileUpload = require('express-fileupload')
 const app = express();
 app.use(cookieParser())
 
-app.use(cors({
-    origin: 'https://tourmaline-dusk-64604f.netlify.app', // Adjust this to match your frontend origin
-    credentials: true // Allow cookies to be sent
-}));
+const allowedOrigins = [
+    'https://tourmaline-dusk-64604f.netlify.app',
+    'https://main--tourmaline-dusk-64604f.netlify.app'
+  ];
+  
+  const corsOptions = {
+    origin: (origin, callback) => {
+      if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    credentials: true
+  };
+  
+  app.use(cors(corsOptions));
 
 app.use(express.json())             
 
