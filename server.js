@@ -9,7 +9,7 @@ const app = express();
 app.use(cookieParser())
 
 app.use(cors({
-    origin: 'http://localhost:3000', // Adjust this to match your frontend origin
+    origin: 'https://my-ecom-back-13.onrender.com', // Adjust this to match your frontend origin
     credentials: true // Allow cookies to be sent
 }));
 
