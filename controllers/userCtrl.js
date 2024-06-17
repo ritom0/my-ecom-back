@@ -80,7 +80,7 @@ const userCtrl = {
        
             res.cookie('refreshtoken', refreshtoken, {
                 httpOnly: true,
-                path: 'https://tourmaline-dusk-64604f.netlify.app/user/refresh_token',
+                path: '/user/refresh_token',
             })
             
             res.json({ accesstoken })
