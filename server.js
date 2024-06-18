@@ -11,7 +11,7 @@ app.use(cookieParser())
 const allowedOrigins = [
     'https://tourmaline-dusk-64604f.netlify.app',
     'https://main--tourmaline-dusk-64604f.netlify.app',
-    'https://my-ecom-font.vercel.app/'
+    'https://my-ecom-font.vercel.app'
   ];
   
   const corsOptions = {
